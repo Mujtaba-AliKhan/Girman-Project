@@ -1,0 +1,312 @@
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #fff 50%, #b5ccf8);
+  background-attachment: fixed;
+  font-family: "Inter";
+}
+.header-container {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 60px;
+  font-family: "poppins";
+  height: 110px;
+  box-shadow: 1px 1px 5px rgb(190, 190, 190);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.girmanLogo2 {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 26px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.subtext {
+  display: block;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  font-size: 24px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: blue;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.brand-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 122px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  max-height: 100px;
+}
+
+.brand-name.hidden {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.girmanLogo {
+  width: 150px;
+  height: 100px;
+  margin-right: 10px;
+}
+.search-section {
+  transition: all 0.3s ease;
+  margin-top: 100px;
+}
+
+.search-bar {
+  margin: 50px auto;
+}
+.search-section.brand-hidden {
+  margin-top: 10px;
+}
+.search-bar input {
+  width: 800px;
+  height: 50px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.cards {
+  display: grid;
+  margin: auto 50%;
+  margin-top: 40px;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Inter";
+  justify-content: center;
+}
+.card {
+  background-color: white;
+  text-align: left;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.name {
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #000000;
+}
+
+.location-icon {
+  margin-right: 5px;
+}
+.card-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e3e3e3;
+}
+.phone {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  color: black;
+}
+
+.phone-icon {
+  margin-right: 10px;
+}
+.phone p {
+  font-size: 10px;
+  margin-top: 5px;
+  color: #afafaf;
+}
+.fetch-details-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.no-result {
+  display: none;
+}
+
+.no-result.show {
+  display: block;
+}
+
+.no-result img {
+  height: 280px;
+}
+
+.no-result h3 {
+  color: #afafaf;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+}
+.modal-container {
+  background-color: white;
+  border-radius: 20px;
+}
+.close-modal {
+  background-color: #fd0000;
+  color: white;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 20%;
+  font-size: 15px;
+  font-weight: bolder;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close-modal:hover {
+  background-color: #fc6262;
+}
+.modal-content p {
+  margin-top: 5px;
+}
+.modal-content img {
+  height: 200px;
+  width: 200px;
+  margin-top: 15px;
+}
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    padding: 20px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-toggler {
+    align-self: center;
+    margin: 0;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+
+  .fetch-details-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .girmanLogo2 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+  .brand-name {
+    font-size: 52px;
+  }
+  .girmanLogo {
+    height: 60px;
+    width: 80px;
+  }
+}
