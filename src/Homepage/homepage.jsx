@@ -162,7 +162,7 @@ const Homepage = () => {
             <div className="card" key={index}>
               <div className="profile">
                 <img
-                  src="public/profle-picture.png"
+                  src="profle-picture.png"
                   alt={`${item.first_name} ${item.last_name}`}
                 />
                 <h2 className="name">
@@ -203,7 +203,7 @@ const Homepage = () => {
 
       {searchTerm && filteredData.length === 0 && (
         <div className={`no-result ${filteredData.length === 0 ? "show" : ""}`}>
-          <img src="public/no-result.png" alt="no result" />
+          <img src="no-result.png" alt="no result" />
           <h3>No result found.</h3>
         </div>
       )}
@@ -234,7 +234,7 @@ const Homepage = () => {
                 <strong>Profile Image:</strong>
               </p>
               <img
-                src="public/profle-picture.png"
+                src="profle-picture.png"
                 alt={`${selectedUser.first_name} ${selectedUser.last_name}`}
               />
             </div>
